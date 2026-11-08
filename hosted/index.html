@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en-CA">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#101412" />
+    <meta
+      name="description"
+      content="Play Yash Roushan's JavaScript Snake game. An 18 by 18 grid, keyboard and touch controls, and a high score saved on your device."
+    />
+    <title>Snake — Yash Roushan</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="game.js"></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a
+        href="https://yashroushan.github.io/portfolio-website/engineering/"
+        class="brand"
+        >YR<span> / PLAYGROUND</span></a
+      ><a
+        href="https://github.com/YashRoushan/Snake_Game"
+        target="_blank"
+        rel="noopener noreferrer"
+        >View source <span aria-hidden="true">↗</span></a
+      >
+    </header>
+    <main>
+      <section class="intro" aria-labelledby="title">
+        <p class="eyebrow">01 / JAVASCRIPT GAME</p>
+        <h1 id="title">One more<br /><em>square.</em></h1>
+        <p class="lede">
+          A small game about thinking<br class="desktop-break" />
+          one move ahead.
+        </p>
+        <div class="rules">
+          <p><span>01</span> Collect the copper squares.</p>
+          <p><span>02</span> Avoid the walls and yourself.</p>
+          <p><span>03</span> Keep your next move open.</p>
+        </div>
+        <p class="source-note">
+          An updated browser edition of my original Snake project. No account.
+          No downloads.
+        </p>
+      </section>
+      <section class="game-panel" aria-label="Snake game">
+        <div class="scoreboard">
+          <div><span>SCORE</span><strong id="score">00</strong></div>
+          <div><span>PERSONAL BEST</span><strong id="best">00</strong></div>
+          <p class="grid-label">18 × 18<br />GRID</p>
+        </div>
+        <div class="board-wrap">
+          <div
+            id="board"
+            role="application"
+            aria-label="Snake playing field. Use arrow keys or W A S D to steer. Space pauses."
+            tabindex="0"
+          ></div>
+          <div id="overlay" class="overlay">
+            <span class="overlay-kicker">READY WHEN YOU ARE</span>
+            <h2 id="overlay-title">Find your rhythm.</h2>
+            <p id="overlay-copy">Arrow keys, WASD or touch controls.</p>
+            <button id="start" class="primary" type="button">
+              Start game <span aria-hidden="true">→</span>
+            </button>
+          </div>
+        </div>
+        <div class="controls-top">
+          <p id="status" role="status" aria-live="polite">Ready to play.</p>
+          <button id="pause" type="button" disabled>Pause</button
+          ><button id="restart" type="button">Restart</button>
+        </div>
+        <div class="touch-controls" aria-label="Direction controls">
+          <button type="button" data-direction="up" aria-label="Move up">
+            ↑
+          </button>
+          <div>
+            <button type="button" data-direction="left" aria-label="Move left">
+              ←</button
+            ><button type="button" data-direction="down" aria-label="Move down">
+              ↓</button
+            ><button
+              type="button"
+              data-direction="right"
+              aria-label="Move right"
+            >
+              →
+            </button>
+          </div>
+        </div>
+        <p class="keyboard-note">
+          ARROWS / WASD <span>TO MOVE</span> <b>·</b> SPACE
+          <span>TO PAUSE</span>
+        </p>
+      </section>
+    </main>
+    <footer>
+      <span>Built by Yash Roushan</span
+      ><span>Best score stays in this browser.</span>
+    </footer>
+  </body>
+</html>
